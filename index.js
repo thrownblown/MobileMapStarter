@@ -23,8 +23,8 @@ BASEMAPS['photo']   = new L.TileLayer("http://{s}.tiles.mapbox.com/v3/greeninfo.
 
 // PLEASE USE YOUR OWN Bing API key
 // used primarily by the geocoder
-var BING_API_KEY = "AjBuYw8goYn_CWiqk65Rbf_Cm-j1QFPH-gGfOxjBipxuEB2N3n9yACKu5s8Dl18N";
-
+var BING_API_KEY = "AoDsGRG7CKVrETWUhsM42uqD5DVinTGzLhDwUz9JIhruKVfk-XRSSNDeOuImbSq_";
+                        
 // the name of a subdirectory where this app will store its content
 // this is particularly important on Android where filesystem is not a sandbox but your SD card
 var STORAGE_SUBDIR = "MobileMapStarter";
