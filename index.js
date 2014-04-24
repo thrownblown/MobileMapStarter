@@ -13,13 +13,15 @@ var DEFAULT_LNG = -123.1712;
 var DEFAULT_ZOOM = 15;
 var MIN_ZOOM = 10;
 var MAX_ZOOM = 16;
-
 // PLEASE USE YOUR OWN Mapbox layers if you use them
 // the "name" attribute is REQUIRED. it's not Leaflet standard, but is used by the cache system.
 var BASEMAPS = {};
 BASEMAPS['terrain'] = new L.TileLayer("http://{s}.tiles.mapbox.com/v3/greeninfo.map-fdff5ykx/{z}/{x}/{y}.jpg", { name:'Terrain', subdomains:['a','b','c','d'] });
 BASEMAPS['photo']   = new L.TileLayer("http://{s}.tiles.mapbox.com/v3/greeninfo.map-zudfckcw/{z}/{x}/{y}.jpg", { name:'Photo', subdomains:['a','b','c','d'] });
-//BASEMAPS['plain']   = new L.TileLayer("http://{s}.tiles.mapbox.com/v3/greeninfo.map-8ljrd2bt/{z}/{x}/{y}.jpg", { name:'Streets', subdomains:['a','b','c','d'] });
+BASEMAPS['Toner']   = new L.TileLayer("http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png", { name:'Streets', subdomains:['a','b','c','d'] });
+BASEMAPS['Cycle']   = new L.TileLayer("http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.jpg", { name:'Streets', subdomains:['a','b','c','d'] });
+// http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png
+// http://tile.stamen.com/toner/<zoom>/<x>/<y>.png
 
 // PLEASE USE YOUR OWN Bing API key
 // used primarily by the geocoder
