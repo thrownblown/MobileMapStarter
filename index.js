@@ -100,6 +100,8 @@ function initCacheThenMap() {
     CACHE.init(function () {
         CACHE.registerLayer(BASEMAPS['terrain']);
         CACHE.registerLayer(BASEMAPS['photo']);
+        CACHE.registerLayer(BASEMAPS['Toner']);
+        CACHE.registerLayer(BASEMAPS['Cycle']);
         initMap();
         resizeMapIfVisible();
     }, function () {
