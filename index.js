@@ -16,10 +16,10 @@ var MAX_ZOOM = 16;
 // PLEASE USE YOUR OWN Mapbox layers if you use them
 // the "name" attribute is REQUIRED. it's not Leaflet standard, but is used by the cache system.
 var BASEMAPS = {};
-BASEMAPS['terrain'] = new L.TileLayer("http://{s}.tiles.mapbox.com/v3/greeninfo.map-fdff5ykx/{z}/{x}/{y}.jpg", { name:'Terrain', subdomains:['a','b','c','d'] });
-BASEMAPS['photo']   = new L.TileLayer("http://{s}.tiles.mapbox.com/v3/greeninfo.map-zudfckcw/{z}/{x}/{y}.jpg", { name:'Photo', subdomains:['a','b','c','d'] });
-BASEMAPS['Toner']   = new L.TileLayer("http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png", { name:'Streets', subdomains:['a','b','c','d'] });
-BASEMAPS['Cycle']   = new L.TileLayer("http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.jpg", { name:'Streets', subdomains:['a','b','c','d'] });
+// BASEMAPS['terrain'] = new L.TileLayer("http://{s}.tiles.mapbox.com/v3/greeninfo.map-fdff5ykx/{z}/{x}/{y}.jpg", { name:'Terrain', subdomains:['a','b','c','d'] });
+// BASEMAPS['photo']   = new L.TileLayer("http://{s}.tiles.mapbox.com/v3/greeninfo.map-zudfckcw/{z}/{x}/{y}.jpg", { name:'Photo', subdomains:['a','b','c','d'] });
+BASEMAPS['Cycle']   = new L.TileLayer("http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png", { name:'Streets', subdomains:['a','b','c','d'] });
+BASEMAPS['Toner']   = new L.TileLayer("http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.jpg", { name:'Streets', subdomains:['a','b','c','d'] });
 // http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png
 // http://tile.stamen.com/toner/<zoom>/<x>/<y>.png
 
@@ -98,8 +98,8 @@ function initCacheThenMap() {
     // initialize the filesystem where we store cached tiles. when this is ready, proceed with the map
     CACHE = new OfflineTileCacher(STORAGE_SUBDIR);
     CACHE.init(function () {
-        CACHE.registerLayer(BASEMAPS['terrain']);
-        CACHE.registerLayer(BASEMAPS['photo']);
+        // CACHE.registerLayer(BASEMAPS['terrain']);
+        // CACHE.registerLayer(BASEMAPS['photo']);
         CACHE.registerLayer(BASEMAPS['Toner']);
         CACHE.registerLayer(BASEMAPS['Cycle']);
         initMap();
@@ -119,7 +119,7 @@ function initMap() {
         closePopupOnClick: false,
         crs: L.CRS.EPSG3857,
         minZoom: MIN_ZOOM, maxZoom: MAX_ZOOM,
-        layers : [ BASEMAPS['terrain'], ACCURACY, LOCATION ]
+        layers : [ BASEMAPS['Toner'], ACCURACY, LOCATION ]
     });
     MAP.setView(LOCATION.getLatLng(),DEFAULT_ZOOM);
 

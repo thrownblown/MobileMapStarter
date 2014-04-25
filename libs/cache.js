@@ -318,11 +318,11 @@ var OfflineTileCacher = function(directoryname) {
                 function(error) {
                     var errmsg;
                     switch (error.code) {
-                        case FileTransferError.FILE_NOT_FOUND_ERR:
-                            errmsg = "One of these was not found:\n";
-                            errmsg += urls[index].url + "\n";
-                            errmsg += urls[index].filename;
-                            break;
+                        // case FileTransferError.FILE_NOT_FOUND_ERR:
+                        //     errmsg = "One of these was not found:\n";
+                        //     errmsg += urls[index].url + "\n";
+                        //     errmsg += urls[index].filename;
+                        //     break;
                         case FileTransferError.INVALID_URL_ERR:
                             errmsg = "Invalid URL:\n";
                             errmsg += urls[index].url + "\n";
